@@ -1,8 +1,28 @@
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Sora, Source_Code_Pro, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["300", "400", "600"],
+  display: "swap",
+  variable: "--font-sora",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["300"],
+  display: "swap",
+  variable: "--font-grotesk",
+});
+
+const sourceCodePro = Source_Code_Pro({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+  variable: "--font-code",
+});
 
 export const metadata: Metadata = {
   title: "Brainwave",
@@ -16,7 +36,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn(
+          "min-h-screen antialiased",
+          sora.variable,
+          sourceCodePro.variable,
+          spaceGrotesk.variable,
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }
