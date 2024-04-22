@@ -39,8 +39,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-sora)", ...fontFamily.sans],
-        serif: ["var(--font-grotesk)", ...fontFamily.serif],
-        mono: ["var(--font-code)", ...fontFamily.mono],
+        code: "var(--font-code)",
+        grotesk: "var(--font-grotesk)",
       },
       letterSpacing: {
         tagline: "0.15em",
