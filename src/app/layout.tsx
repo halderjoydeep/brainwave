@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen antialiased font-sans",
+          "min-h-screen scroll-smooth bg-n-8 font-sans text-n-1 antialiased",
           // sora.variable,
           // sourceCodePro.variable,
           // spaceGrotesk.variable,
