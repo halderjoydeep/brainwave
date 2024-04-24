@@ -9,11 +9,15 @@ const Button = ({ white, className, children }: ButtonProps) => {
   return (
     <button
       className={cn(
-        "button inline-flex items-center justify-center",
+        "button relative inline-flex h-11 items-center justify-center px-7 transition-colors hover:text-color-1",
+        {
+          "text-n-8": white,
+          "text-n-1": !white,
+        },
         className,
       )}
     >
-      <span>{children}</span>
+      <span className="z-2">{children}</span>
       <ButtonSvg white={white} />
     </button>
   );
