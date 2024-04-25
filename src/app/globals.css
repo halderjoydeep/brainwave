@@ -14,9 +14,3 @@
     color-scheme: dark;
   }
 }
-
-@layer components {
-  .button {
-    @apply font-code text-xs font-bold uppercase tracking-wider;
-  }
-}

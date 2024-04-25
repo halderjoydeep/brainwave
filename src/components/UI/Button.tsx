@@ -4,7 +4,7 @@ import React from "react";
 import ButtonSvg from "../SVG/ButtonSvg";
 
 const buttonVariants = cva(
-  "relative inline-flex h-11 items-center justify-center whitespace-nowrap px-7 font-code text-xs font-bold transition-colors hover:text-color-1",
+  "relative inline-flex h-11 items-center justify-center whitespace-nowrap px-7 font-code text-xs font-bold uppercase tracking-wider transition-colors hover:text-color-1",
   {
     variants: {
       variant: {
