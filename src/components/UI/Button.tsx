@@ -1,26 +1,42 @@
 import { cn } from "@/lib/utils";
+import { cva, type VariantProps } from "class-variance-authority";
+import React from "react";
 import ButtonSvg from "../SVG/ButtonSvg";
 
-interface ButtonProps extends React.ComponentProps<"button"> {
-  white?: boolean;
-}
-
-const Button = ({ white, className, children }: ButtonProps) => {
-  const buttonClass = cn(
-    "button relative inline-flex h-11 items-center justify-center px-7 transition-colors hover:text-color-1",
-    {
-      "text-n-8": white,
-      "text-n-1": !white,
+const buttonVariants = cva(
+  "relative inline-flex h-11 items-center justify-center whitespace-nowrap px-7 font-code text-xs font-bold transition-colors hover:text-color-1",
+  {
+    variants: {
+      variant: {
+        default: "text-n-1",
+        white: "text-n-8",
+      },
     },
-    className,
-  );
+    defaultVariants: {
+      variant: "default",
+    },
+  },
+);
 
-  return (
-    <button className={buttonClass}>
-      <span className="z-2">{children}</span>
-      <ButtonSvg white={white} />
-    </button>
-  );
-};
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {}
 
-export default Button;
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, children, ...props }, ref) => {
+    return (
+      <button
+        className={cn(buttonVariants({ variant, className }))}
+        ref={ref}
+        {...props}
+      >
+        <span className="z-2">{children}</span>
+        <ButtonSvg white={variant === "white"} />
+      </button>
+    );
+  },
+);
+
+Button.displayName = "Button";
+
+export { Button, buttonVariants };
