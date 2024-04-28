@@ -1,10 +1,12 @@
+import Header from "@/components/Header";
 import ButtonGradient from "@/components/SVG/ButtonGradient";
-import { Button } from "@/components/ui/Button";
 
 export default function Home() {
   return (
     <>
-      <Button>Sign In</Button>
+      <div className="overflow-hidden pt-[4.75rem] lg:pt-[5.25rem]">
+        <Header />
+      </div>
       <ButtonGradient />
     </>
   );
