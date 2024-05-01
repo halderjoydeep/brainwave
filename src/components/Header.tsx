@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import MenuSvg from "./SVG/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { Button } from "./ui/Button";
@@ -20,13 +21,18 @@ export default function Header() {
   const toggleNavigation = () => {
     if (openNavigation) {
       setOpenNavigation(false);
+      enablePageScroll();
     } else {
       setOpenNavigation(true);
+      disablePageScroll();
     }
   };
 
   const handleClick = () => {
     if (!openNavigation) return;
+
+    setOpenNavigation(false);
+    enablePageScroll();
   };
 
   useEffect(() => {

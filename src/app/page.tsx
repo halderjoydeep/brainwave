@@ -6,6 +6,7 @@ export default function Home() {
     <>
       <div className="overflow-hidden pt-[4.75rem] lg:pt-[5.25rem]">
         <Header />
+        <h1 className="h-screen">Something</h1>
       </div>
       <ButtonGradient />
     </>
