@@ -69,6 +69,10 @@ const config: Config = {
       borderWidth: {
         DEFAULT: "0.0625rem",
       },
+      backgroundImage: {
+        "conic-gradient":
+          "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
+      },
     },
   },
   plugins: [],

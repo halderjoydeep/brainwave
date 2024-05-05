@@ -7,6 +7,7 @@ interface SectionProps {
   className?: string;
   crosses?: boolean;
   crossesOffset?: string;
+  customPaddings?: boolean;
 }
 
 const Section = ({
@@ -15,13 +16,17 @@ const Section = ({
   className,
   crosses,
   crossesOffset,
+  customPaddings,
 }: SectionProps) => {
   return (
     <div
       id={id}
       className={cn(
-        "relative py-10 lg:py-16 xl:py-20",
-        { "lg:py-32 xl:py-40": crosses },
+        "relative",
+        {
+          "py-10 lg:py-16 xl:py-20": !customPaddings,
+          "lg:py-32 xl:py-40": !customPaddings && crosses,
+        },
         className,
       )}
     >
@@ -38,7 +43,7 @@ const Section = ({
               crossesOffset,
             )}
           />
-          <SectionSvg />
+          <SectionSvg crossesOffset={crossesOffset} />
         </>
       )}
     </div>
