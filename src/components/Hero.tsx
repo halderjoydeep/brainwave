@@ -7,6 +7,7 @@ import { ScrollParallax } from "react-just-parallax";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import Section from "./Section";
+import { BottomLine } from "./design/Hero";
 import { Button } from "./ui/Button";
 
 export default function Hero() {
@@ -91,6 +92,8 @@ export default function Hero() {
 
         {/* Company Logos */}
       </div>
+
+      <BottomLine />
     </Section>
   );
 }
