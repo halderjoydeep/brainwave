@@ -10,7 +10,11 @@ const Generating = ({ className }: { className?: string }) => {
         className,
       )}
     >
-      <Image src={loading} alt="Loading" className="mr-4 h-5 w-5" />
+      <Image
+        src={loading}
+        alt="Loading"
+        className="mr-4 h-5 w-5 animate-spin"
+      />
       AI is generating
     </div>
   );
