@@ -1,4 +1,12 @@
-import { file02, homeSmile, plusSquare, searchMd } from "@/assets";
+import {
+  file02,
+  homeSmile,
+  image2,
+  image3,
+  image4,
+  plusSquare,
+  searchMd,
+} from "@/assets";
 
 export const navigation = [
   {
@@ -37,3 +45,4 @@ export const navigation = [
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
+export const notificationAvatars = [image2, image3, image4];
