@@ -1,3 +1,5 @@
+import { file02, homeSmile, plusSquare, searchMd } from "@/assets";
+
 export const navigation = [
   {
     id: "1",
@@ -33,3 +35,5 @@ export const navigation = [
     onlyMobile: true,
   },
 ];
+
+export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
