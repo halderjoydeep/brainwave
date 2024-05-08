@@ -94,6 +94,9 @@ const config: Config = {
         ".body-2": {
           "@apply font-light text-[0.875rem] leading-6 md:text-base": {},
         },
+        ".thread": {
+          "@apply absolute bottom-1/2 left-1/2 h-1/2 w-0.25 origin-bottom": {},
+        },
       });
     }),
   ],
