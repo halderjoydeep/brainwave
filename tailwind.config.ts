@@ -78,26 +78,32 @@ const config: Config = {
   },
   plugins: [
     plugin(({ addBase, addComponents, addUtilities }) => {
-      addBase({
-        ".container": {
-          "@apply mx-auto max-w-[77.5rem] px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]":
-            {},
-        },
-        ".h1": {
-          "@apply text-[2.5rem] font-semibold leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem]":
-            {},
-        },
-        ".body-1": {
-          "@apply text-sm leading-6 md:text-base md:leading-7 lg:text-xl lg:leading-8":
-            {},
-        },
-        ".body-2": {
-          "@apply font-light text-[0.875rem] leading-6 md:text-base": {},
-        },
-        ".thread": {
-          "@apply absolute bottom-1/2 left-1/2 h-1/2 w-0.25 origin-bottom": {},
-        },
-      });
+      addBase({}),
+        addComponents({
+          ".container": {
+            "@apply mx-auto max-w-[77.5rem] px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]":
+              {},
+          },
+          ".h1": {
+            "@apply text-[2.5rem] font-semibold leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem]":
+              {},
+          },
+          ".body-1": {
+            "@apply text-sm leading-6 md:text-base md:leading-7 lg:text-xl lg:leading-8":
+              {},
+          },
+          ".body-2": {
+            "@apply font-light text-[0.875rem] leading-6 md:text-base": {},
+          },
+          ".tagline": {
+            "@apply font-grotesk font-light text-xs tracking-tagline uppercase":
+              {},
+          },
+          ".thread": {
+            "@apply absolute bottom-1/2 left-1/2 h-1/2 w-0.25 origin-bottom":
+              {},
+          },
+        });
     }),
   ],
 };

@@ -39,7 +39,7 @@ export const BackgroundCircles = () => {
 
       {/* Moving background colored circle balls */}
       <MouseParallax strength={0.07}>
-        <div className="thread origin-bottom rotate-[46deg]">
+        <div className="thread rotate-[46deg]">
           <div
             className={`-ml-1 -mt-36 h-2 w-2 rounded-full bg-gradient-to-b from-[#DD734F] to-[#1A1A32] transition-transform duration-500 ease-out ${
               mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"

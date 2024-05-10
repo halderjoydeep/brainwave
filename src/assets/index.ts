@@ -1,5 +1,6 @@
 import background from "./background.jpg";
 import brainwave from "./brainwave.svg";
+import companyLogo from "./companylogo.svg";
 import file02 from "./file-02.svg";
 import homeSmile from "./home-smile.svg";
 import loading from "./loading.png";
@@ -18,6 +19,7 @@ import image4 from "./notification/image-4.png";
 export {
   background,
   brainwave,
+  companyLogo,
   curve,
   file02,
   heroBackground,

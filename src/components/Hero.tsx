@@ -4,6 +4,7 @@ import { curve, heroBackground, robot } from "@/assets";
 import { heroIcons } from "@/constants";
 import Image from "next/image";
 import { ScrollParallax } from "react-just-parallax";
+import CompanyLogos from "./CompanyLogos";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import Section from "./Section";
@@ -76,7 +77,7 @@ export default function Hero() {
 
           {/* Canvas drop shadows */}
           <div className="relative z-1 mx-2.5 h-6 rounded-b-[1.25rem] bg-n-11 shadow-xl lg:mx-8" />
-          <div className="relative z-1 mx-6 h-6 rounded-b-[1.25rem] bg-n-11/70 shadow-xl lg:mx-20" />
+          <div className="relative z-1 mx-6 h-6 rounded-b-[1.25rem] bg-n-11/70 shadow-xl backdrop-blur lg:mx-20" />
 
           {/* Hero Background */}
           <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
@@ -87,11 +88,10 @@ export default function Hero() {
             />
           </div>
 
-          {/* Background Circles */}
           <BackgroundCircles />
         </div>
 
-        {/* Company Logos */}
+        <CompanyLogos />
       </div>
 
       <BottomLine />
